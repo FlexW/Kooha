@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/seadve/Kooha">
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts.ui</file>
+
+    <file>ui/style.css</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/status/data_icons_display-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/status/data_icons_selection-symbolic.svg</file>
+
+    <file alias="chime.ogg">sounds/chime.ogg</file>
+  </gresource>
+</gresources>
