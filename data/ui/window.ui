@@ -250,9 +250,6 @@
         </child>
       </object>
     </child>
-    <style>
-      <class name="kooha-window"/>
-    </style>
   </template>
   <menu id="menu">
     <section>
