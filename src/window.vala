@@ -16,14 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Kooha {
-    [GtkTemplate (ui = "/io/github/seadve/Kooha/ui/window.ui")]
-    public class Window : Adw.ApplicationWindow {
+[GtkTemplate (ui = "/io/github/seadve/Kooha/ui/window.ui")]
+    public class Kooha.Window : Adw.ApplicationWindow {
 
-        public Window (Gtk.Application app) {
-            Object (application: app);
-
-
-        }
+    public Window (Gtk.Application app) {
+        Object (application: app);
     }
 }

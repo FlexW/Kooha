@@ -16,42 +16,40 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Kooha {
-    class Application : Gtk.Application {
-        public static Window? win = null;
-        public static GLib.Settings settings;
+class Kooha.Application : Gtk.Application {
+    public static Window? win = null;
+    public static GLib.Settings settings;
 
-        public Application () {
-            Object (
-                flags: ApplicationFlags.FLAGS_NONE,
-                application_id: "io.github.seadve.Kooha"
-            );
+    public Application () {
+        Object (
+            flags: ApplicationFlags.FLAGS_NONE,
+            application_id: "io.github.seadve.Kooha"
+        );
+    }
+
+    static construct {
+        settings = new GLib.Settings ("io.github.seadve.Kooha");
+    }
+
+    protected override void activate () {
+        Adw.init ();
+
+        var css_provider = new Gtk.CssProvider ();
+        css_provider.load_from_resource ("/io/github/seadve/Kooha/ui/style.css");
+        Gtk.StyleContext.add_provider_for_display (
+            (!) Gdk.Display.get_default (),
+            css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_USER
+        );
+
+        if (win == null) {
+            win = new Window (this);
         }
+        ((!) win).present ();
+    }
 
-        static construct {
-            settings = new GLib.Settings ("io.github.seadve.Kooha");
-        }
-
-        protected override void activate () {
-            Adw.init ();
-
-            var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_resource ("/io/github/seadve/Kooha/ui/style.css");
-            Gtk.StyleContext.add_provider_for_display (
-                (!) Gdk.Display.get_default (),
-                css_provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_USER
-            );
-
-            if (win == null) {
-                win = new Window (this);
-            }
-            ((!) win).present ();
-        }
-
-        public static int main (string[] args) {
-            var app = new Kooha.Application ();
-            return app.run (args);
-        }
+    public static int main (string[] args) {
+        var app = new Kooha.Application ();
+        return app.run (args);
     }
 }
