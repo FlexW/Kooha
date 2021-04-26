@@ -22,6 +22,7 @@
                         <property name="menu-model">menu</property>
                         <property name="valign">center</property>
                         <property name="icon-name">open-menu-symbolic</property>
+                        <property name="has-frame">False</property>
                         <!-- <accelerator key="F10" signal="clicked"/> -->
                         <style>
                           <class name="circular"/>
