@@ -1,14 +1,14 @@
-headerbar.flat {
+.flat {
   background-image: none;
   border: none;
   background-color: @theme_bg_color;
 }
 
-button.wide {
+.wide {
   min-width: 138px;
 }
 
-stackswitcher.tall {
+.tall {
   min-height: 72px;
 }
 

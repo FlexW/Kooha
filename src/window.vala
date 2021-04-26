@@ -18,7 +18,7 @@
 
 namespace Kooha {
     [GtkTemplate (ui = "/io/github/seadve/Kooha/ui/window.ui")]
-    public class Window : Hdy.ApplicationWindow {
+    public class Window : Adw.ApplicationWindow {
 
         public Window (Gtk.Application app) {
             Object (application: app);
