@@ -1,5 +1,6 @@
 stackswitcher button {
-  min-width: 72px;
+  min-width: 75px;
+  min-height: 63px;
 }
 
 stackswitcher image {
@@ -10,10 +11,6 @@ headerbar.flat {
   background-image: none;
   border: none;
   background-color: @theme_bg_color;
-}
-
-stackswitcher.tall {
-  min-height: 72px;
 }
 
 .time_label {

@@ -72,9 +72,6 @@
                         <!-- <property name="homogeneous">True</property> -->
                         <!-- <property name="icon-size">5</property> -->
                         <property name="stack">title_stack</property>
-                        <style>
-                          <class name="tall"/>
-                        </style>
                       </object>
                     </child>
                     <child>
