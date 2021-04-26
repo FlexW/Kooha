@@ -1,3 +1,11 @@
+stackswitcher button {
+  min-width: 72px;
+}
+
+stackswitcher image {
+  -gtk-icon-size: 33px;
+}
+
 headerbar.flat {
   background-image: none;
   border: none;
